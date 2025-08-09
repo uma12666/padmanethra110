@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Switcher</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            margin: 30px auto;
+            border-radius: 10px ;
+            transition: 0.5s;
+            border: 2px solid black;
+        }
+        .btn {
+            display: block;
+            width: 120px;
+            margin: 10px auto;
+            padding: 10px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #redBtn { background-color: red; color: white; }
+        #blueBtn { background-color: blue; color: white; }
+        #reloadBtn { background-color: gray; color: white; }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <button class="btn" id="redBtn">Red Color</button>
+    <button class="btn" id="blueBtn">Blue Color</button>
+    <button class="btn" id="reloadBtn">Reload</button>
+
+    <script>
+        const box = document.getElementById('box');
+
+        document.getElementById('redBtn').onclick = () => {
+            box.style.backgroundColor = 'red';
+        };
+
+        document.getElementById('blueBtn').onclick = () => {
+            box.style.backgroundColor = 'blue';
+        };
+
+        document.getElementById('reloadBtn').onclick = () => {
+            location.reload();
+        };
+    </script>
+
+</body>
+</html>
